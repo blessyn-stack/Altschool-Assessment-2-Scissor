@@ -688,6 +688,20 @@ body {
 
     .stats-container {
         flex-direction: column;
+
+        .link-illustration {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.link-illustration img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
     }
 
     .features-grid {
@@ -733,4 +747,48 @@ body {
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* Final mobile responsiveness adjustments */
+
+@media screen and (max-width: 480px) {
+
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Link illustration */
+    .hero {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    img[src*="link illustration"] {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Decorative curve image */
+    .curve-image {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .curve-image img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* Prevent images from exceeding their containers */
+    img {
+        max-width: 100%;
+    }
 }
